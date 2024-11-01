@@ -594,6 +594,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 941574265}
+  obiwandialogue: {fileID: 11400000, guid: 472d9801b87039f47a65575e5a10c069, type: 2}
+  speechBox: {fileID: 370773128}
 --- !u!114 &1276243048
 MonoBehaviour:
   m_ObjectHideFlags: 0
