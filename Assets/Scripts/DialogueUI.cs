@@ -10,6 +10,7 @@ public class DialogueUI : MonoBehaviour
     [SerializeField] private GameObject speechBox;
 
     private TypingEffect typingEffect;
+    private ResponceHandler responceHandler;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class DialogueUI : MonoBehaviour
 //        GetComponent<typingeffect>().Run("testing this new dialogue\nwith new typing effect", dialogueBox);
 //        GetComponent<typingeffect>().Run("testing this new dialogue\nwith new typing effect\nI hope the resizing works\nfor extra lines.", dialogueBox);
         typingEffect = GetComponent<TypingEffect>();
+        responceHandler = GetComponent<ResponceHandler>();
         CloseTheDialogueBox();
         ShowingDialogue(obiwandialogue);
     }
@@ -33,13 +35,31 @@ public class DialogueUI : MonoBehaviour
     private IEnumerator TheDialogue(DialogueObject dialogueObect)
     {
         yield return new WaitForSeconds(2);
-        foreach (string dialogue in dialogueObect.Dialogue)
+//        foreach (string dialogue in dialogueObect.Dialogue)
+//        {
+//            yield return typingEffect.Run(dialogue, dialogueBox);
+//            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+//            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+//        }
+
+        for (int i = 0; i < dialogueObect.Dialogue.Length; i++)
         {
+            string dialogue = dialogueObect.Dialogue[i];
             yield return typingEffect.Run(dialogue, dialogueBox);
-            //            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+//            if (i == dialogueObect.Dialogue.Length - 1 && dialogueObect.Responces != null && dialogueObect.Responces.Length > 0) break;
+            if (i == dialogueObect.Dialogue.Length - 1 && dialogueObect.HasResponces) break;
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
         }
-        CloseTheDialogueBox();
+
+        if (dialogueObect.HasResponces)
+        {
+            responceHandler.ShowResponces(dialogueObect.Responces);
+        }
+        else
+        {
+            CloseTheDialogueBox();
+        }
+
     }
 
     private void CloseTheDialogueBox()

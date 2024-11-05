@@ -16,8 +16,13 @@ MonoBehaviour:
   - 'Hello there!
 
 
-    This is Obiwan speaking'
+    This is Obi Wan speaking'
   - 'I have the high ground
 
 
     As only a Sith deals in absolutes.'
+  responces:
+  - responceText: Kill Obi Wan
+    dialogueObject: {fileID: 11400000, guid: 992a908aeac17024cb4c46952b748c59, type: 2}
+  - responceText: Kill Anakin
+    dialogueObject: {fileID: 11400000, guid: c1c33fc2a9176254a8e62e247cfaa601, type: 2}
