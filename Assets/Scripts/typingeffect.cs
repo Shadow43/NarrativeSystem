@@ -5,10 +5,10 @@ using UnityEngine;
 public class TypingEffect : MonoBehaviour
 {
     [SerializeField] private float typingSpeed;
-    //    public void Run(string typeingtext, TMP_Text dialogueTexts)
-    //    {
-    //        StartCoroutine(tyingthetext(typeingtext, dialogueTexts));
-    //    }
+//    public void Run(string typeingtext, TMP_Text dialogueTexts)
+//    {
+//        StartCoroutine(tyingthetext(typeingtext, dialogueTexts));
+//    }
     public Coroutine Run(string typeingtext, TMP_Text dialogueTexts)
     {
         return StartCoroutine(tyingthetext(typeingtext, dialogueTexts));
@@ -24,7 +24,7 @@ public class TypingEffect : MonoBehaviour
 
         while (characterindex < typeingtext.Length)
         {
-            //            typingtime += Time.deltaTime;
+//            typingtime += Time.deltaTime;
             typingtime += Time.deltaTime * typingSpeed;
             characterindex = Mathf.FloorToInt(typingtime);
             characterindex = Mathf.Clamp(characterindex, 0, typeingtext.Length);

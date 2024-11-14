@@ -6,8 +6,9 @@ public class DialogueUI : MonoBehaviour
 {
 //    [SerializeField] private TMP_Text nameBox;
     [SerializeField] private TMP_Text dialogueBox;
-    [SerializeField] private DialogueObject obiwandialogue;
+    [SerializeField] private DialogueObject dialogue;
     [SerializeField] private GameObject speechBox;
+    [SerializeField] private GameObject tutorial;
 
     private TypingEffect typingEffect;
     private ResponceHandler responceHandler;
@@ -15,6 +16,8 @@ public class DialogueUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(Gamestart());
+
 //        dialogueBox.text = "This is a big test";
 //        dialogueBox.text = "This is a big test\nwe will continue this at a later date!";
 //        dialogueBox.text = "This is a big test\nwe will chat later!\ngoodbye sucker";
@@ -24,23 +27,30 @@ public class DialogueUI : MonoBehaviour
         typingEffect = GetComponent<TypingEffect>();
         responceHandler = GetComponent<ResponceHandler>();
         CloseTheDialogueBox();
-        ShowingDialogue(obiwandialogue);
+//        ShowingDialogue(dialogue);
+
     }
     public void ShowingDialogue(DialogueObject dialogueObject)
     {
         speechBox.SetActive(true);
         StartCoroutine (TheDialogue(dialogueObject));
     }
-
+    private IEnumerator Gamestart()
+    {
+        speechBox.SetActive(false);
+        yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+        tutorial.SetActive(false);
+        speechBox.SetActive(true);
+        ShowingDialogue(dialogue);
+    }
     private IEnumerator TheDialogue(DialogueObject dialogueObect)
     {
-        yield return new WaitForSeconds(2);
-//        foreach (string dialogue in dialogueObect.Dialogue)
-//        {
-//            yield return typingEffect.Run(dialogue, dialogueBox);
-//            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-//            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-//        }
+        //        foreach (string dialogue in dialogueObect.Dialogue)
+        //        {
+        //            yield return typingEffect.Run(dialogue, dialogueBox);
+        //            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        //            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+        //        }
 
         for (int i = 0; i < dialogueObect.Dialogue.Length; i++)
         {

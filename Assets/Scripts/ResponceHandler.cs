@@ -8,6 +8,8 @@ public class ResponceHandler : MonoBehaviour
     [SerializeField] private RectTransform responceBox;
     [SerializeField] private RectTransform responceButtonTemplate;
     [SerializeField] private RectTransform responceContainer;
+ //   float responceBoxWidth = 1400f;
+ //   float responceBoxHeight = 70f;
 
     private DialogueUI dialogueUI;
 
@@ -17,11 +19,14 @@ public class ResponceHandler : MonoBehaviour
     {
         responceButtonTemplate.GetComponent<TMP_Text>().text = string.Empty;
         dialogueUI = GetComponent<DialogueUI>();
+        responceBox.gameObject.SetActive(false);
     }
     public void ShowResponces(Responce[] responces)
     {
-        float responceBoxWidth = 0f;
-        float responceBoxHeight = 0f;
+
+//        float responceBoxWidth = 160f;
+        float responceBoxWidth = 1400f;
+        float responceBoxHeight = 70f;
 
         foreach (Responce responce in responces)
         {
@@ -32,11 +37,11 @@ public class ResponceHandler : MonoBehaviour
             responceButton.GetComponent<Button>().onClick.AddListener(() => OnPickedResponce(responce));
 
             tempResponceButton.Add(responceButton);
-
-            responceBoxWidth += responceButtonTemplate.sizeDelta.y;
-            responceBoxHeight += responceButtonTemplate.sizeDelta.x;
+            
+//            responceBoxWidth += responceButtonTemplate.sizeDelta.y;
+//           responceBoxHeight += responceButtonTemplate.sizeDelta.x;
         }
-        responceBox.sizeDelta = new Vector2(responceBoxHeight, responceBoxWidth);
+        responceBox.sizeDelta = new Vector2(responceBoxWidth, 70f);
         responceBox.gameObject.SetActive(true);
     }
 

@@ -10,8 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbc40aede2b11eb4d9f7d11401eb941d, type: 3}
-  m_Name: KillObiWan
+  m_Name: GhostRider
   m_EditorClassIdentifier: 
   dialogue:
-  - You killed Obi Wan
-  responces: []
+  - 'Jaxon:
+
+    "It is Ghostrider"'
+  - 'AVISS:
+
+    "You chose poorly"'
+  - Jaxon got zapped by AVISS
+  responces:
+  - responceText: Retry
+    dialogueObject: {fileID: 11400000, guid: 4808bab366b202f458d87a06e816c788, type: 2}

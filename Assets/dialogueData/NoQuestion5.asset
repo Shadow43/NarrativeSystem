@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc40aede2b11eb4d9f7d11401eb941d, type: 3}
+  m_Name: NoQuestion5
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Jaxon decides to let go of the front door handle.
+  - After a few seconds Jaxon grabs the door handle again triggering AVISS to talk
+    again
+  - 'AVISS:
+
+    "Welcome back User Jaxon."'
+  - 'Security AI:
+
+    "In the movie Jurassic World Dominion, which Atrociraptor
+    was knocked out of the plane?"'
+  responces:
+  - responceText: Atrociraptor Red
+    dialogueObject: {fileID: 11400000, guid: 57c14ad3ca86c684da344cdec1956e99, type: 2}
+  - responceText: Atrociraptor Ghost
+    dialogueObject: {fileID: 11400000, guid: 24aba514ac094bb4eb8a43ccb55d06b6, type: 2}
+  - responceText: Atrociraptor Tiger
+    dialogueObject: {fileID: 11400000, guid: 4e48a8ab8c48e3a48aec00236fd7d3d6, type: 2}
+  - responceText: Atrociraptor Panthera
+    dialogueObject: {fileID: 11400000, guid: 0180d0a6d9a4c0f4dbc4011829684cf7, type: 2}
+  - responceText: Leave
+    dialogueObject: {fileID: 11400000}

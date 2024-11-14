@@ -10,19 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbc40aede2b11eb4d9f7d11401eb941d, type: 3}
-  m_Name: TestDialogue
+  m_Name: Carrie
   m_EditorClassIdentifier: 
   dialogue:
-  - 'Hello there!
+  - 'Jaxon: "I know this. It''s Carrie"'
+  - 'AVISS:
 
-
-    This is Obi Wan speaking'
-  - 'I have the high ground
-
-
-    As only a Sith deals in absolutes.'
+    "You chose poorly"'
+  - Jaxon got zapped by AVISS
   responces:
-  - responceText: Kill Obi Wan
-    dialogueObject: {fileID: 11400000, guid: 992a908aeac17024cb4c46952b748c59, type: 2}
-  - responceText: Kill Anakin
-    dialogueObject: {fileID: 11400000, guid: c1c33fc2a9176254a8e62e247cfaa601, type: 2}
+  - responceText: Retry
+    dialogueObject: {fileID: 11400000, guid: 4808bab366b202f458d87a06e816c788, type: 2}

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc40aede2b11eb4d9f7d11401eb941d, type: 3}
+  m_Name: Gamestart
+  m_EditorClassIdentifier: 
+  dialogue:
+  - A young man got out of the car looking at a latter in his hand, before walking
+    up a gravel path to the front door of a victorian five story mansion.
+  - 'Jaxon:
+
+    "My eccentric Great-Uncle Alfonz has left this place in his will.
+
+    He
+    told me I have to come and stay the night as well as answer a series of quizzes
+    so I can claim this high tech ancient looking mansion..."'
+  - 'Jaxon:
+
+    "If I knew Great-Uncle Alfonz like I did, this deals with his ''A
+    Very Inteligent Security System'' I hope the quizzes won''t be hard to beat"'
+  - Jaxon, after spending the night went to the front door, and grabbed the doorhandle,
+    only to find that it was locked. He then heard a computerized voice say
+  - 'Security System AI:
+
+    "Greetings user. I am AVISS. Scans state you are Jaxon.
+    You must select the correct answer to these next four questions."'
+  responces:
+  - responceText: Let's hear the first question
+    dialogueObject: {fileID: 11400000, guid: 7a363e00af0d2264f962368ee1d52509, type: 2}
+  - responceText: Leave
+    dialogueObject: {fileID: 11400000, guid: f7969dfd428a6d94b8fbb85f7302ee50, type: 2}

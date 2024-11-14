@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc40aede2b11eb4d9f7d11401eb941d, type: 3}
+  m_Name: NoQuestion3
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Jaxon decides to let go of the front door handle.
+  - After a few seconds Jaxon grabs the door handle again triggering AVISS to talk
+    again
+  - 'AVISS:
+
+    "Welcome back User Jaxon."'
+  - 'AVISS:
+
+    "Now for the next question, Who is Johnny Storm?"'
+  responces:
+  - responceText: The Human Torch
+    dialogueObject: {fileID: 11400000, guid: 992a908aeac17024cb4c46952b748c59, type: 2}
+  - responceText: Pryo
+    dialogueObject: {fileID: 11400000, guid: 5938b26dd5387f84c8c628dbcca5f8a0, type: 2}
+  - responceText: FireStorm
+    dialogueObject: {fileID: 11400000, guid: e9b55acbdbefd4c46a45bda7b16e7751, type: 2}
+  - responceText: Leave
+    dialogueObject: {fileID: 11400000}
