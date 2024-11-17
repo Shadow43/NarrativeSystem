@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogue:
   - 'Jaxon:
 
-    "It is Johnny Stom"'
+    "It is the superhero the Human Torch"'
   - 'AVIS:
 
     "You chose correctly"'
@@ -27,7 +27,7 @@ MonoBehaviour:
     Chaos Theory"'
   - 'AVISS:
 
-    "Which of the Atrociraptors are missing"'
+    "Which of the Atrociraptors are missing from season 1"'
   responces:
   - responceText: Atrociraptor Red
     dialogueObject: {fileID: 11400000, guid: f1a318a8c5735274d9d3293bb2b48fea, type: 2}

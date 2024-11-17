@@ -45,12 +45,12 @@ public class DialogueUI : MonoBehaviour
     }
     private IEnumerator TheDialogue(DialogueObject dialogueObect)
     {
-        //        foreach (string dialogue in dialogueObect.Dialogue)
-        //        {
-        //            yield return typingEffect.Run(dialogue, dialogueBox);
-        //            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-        //            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-        //        }
+//        foreach (string dialogue in dialogueObect.Dialogue)
+//        {
+//            yield return typingEffect.Run(dialogue, dialogueBox);
+//            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+//            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+//        }
 
         for (int i = 0; i < dialogueObect.Dialogue.Length; i++)
         {
